@@ -1,0 +1,25 @@
+.album-img img{
+	transition: all 1s linear;
+}
+/**.album-img-1**/
+.album-img-1:hover img:nth-child(1){
+	transform: rotate(30deg);
+}
+.album-img-1:hover img:nth-child(2){
+	transform: rotate(-30deg);
+}
+.album-img-1:hover img:nth-child(3){
+	transform: rotate(20deg);
+}
+.album-img-1:hover img:nth-child(4){
+	transform: rotate(-20deg);
+}
+.album-img-1:hover img:nth-child(5){
+	transform: rotate(10deg);
+}
+.album-img-1:hover img:nth-child(6){
+	transform: rotate(-10deg);
+}
+.album-img-1:hover img:nth-child(7){
+	transform: scale(0.95);
+}

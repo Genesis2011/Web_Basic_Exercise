@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2"></div>
+		</div>
+		<div class="box3">
+			<div class="box4"></div>
+		</div>
+	</body>
+	<style type="text/css">
+		.box1,.box3{
+			width: 300px;
+			height: 300px;
+		}
+		.box2,.box4{
+			width: 100px;
+			height: 100px;
+		}
+		.box1{
+			background-color: tan;
+			/*定位  relative相对定位*/
+			/*相对定位相对于的是父级元素，但是定位方向上有其他标签相对于的，就是其他标签*/
+			position: relative;
+			/*top: 50px;*/
+		}
+		.box2{
+			background-color: teal;
+			/*当父级元素有定位属性时，相对于父级元素*/
+			/*当父级元素没有定位属性时，向更高一级查找，知道找到定位属性，或者body为止*/
+			/*同级元素都有绝对定位时，互不影响*/
+			position: absolute;
+			top: 100px;
+		}
+		.box3{
+			height: 700px;
+			background-color: thistle;
+			position: relative;
+			/*top: 10px;*/
+		}
+		.box4{
+			background-color: tomato;
+			/*固定定位*/
+			position: fixed;
+			right: 100px;
+			top: 10px;
+		}
+	</style>
+</html>

@@ -17,11 +17,16 @@
 			width: 300px;
 			height: 300px;
 			background-color: tan;
+			/*当加了浮动属性后，块级元素还是块级元素，但是不再默认独占一行*/
+			/*浮动相对于的是父级元素，但是当浮动方向上有其他元素时，相对于其他元素*/
+			float: left;
 		}
 		.box2{
 			width: 300px;
 			height: 300px;
 			background-color: yellow;
+			/*浮动*/
+			float: left;
 		}
 		.box3{
 			width: 100px;

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>小球碰壁运动</title>
+	</head>
+	<style type="text/css">
+		#ball{
+			width: 66px;
+			height: 66px;
+			background-color: orange;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 100px;
+		}
+	</style>
+	<body>
+		<div id="ball"></div>
+	</body>
+	<script type="text/javascript">
+		var ball=document.getElementById("ball");
+		var ballwidth=ball.offsetWidth;
+		var ballheight=ball.offsetHeight;
+		/*屏幕可视区的宽度与高度*/
+		var screenwidth=document.documentElement.clientWidth || document.body.clientWidth;
+		var screenheight=document.documentElement.clientHeight || document.body.clientHeight;
+	</script>
+</html>
