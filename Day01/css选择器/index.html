@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--编码格式-->
+		<meta charset="utf-8" />
+		<!--标题-->
+		<title>css选择器</title>
+	</head>
+	<body>
+		<!--分区标签-->
+		<!--style样式-->
+		<div style="width: 200px;height: 200px;background-color: yellow;">test</div>
+		<!--div为块级元素，默认独占一行-->		
+		<div></div>
+		<div id="box"></div>
+		<div class="box1"></div>
+		<li><strong>我是斜体字</strong></li>
+	</body>
+	<!--样式标签-->
+	<style type="text/css">
+		/*标签选择器*/
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		
+		/*id选择器  #+id名*/
+		#box{
+			width: 200px;
+			height: 200px;
+			background-color: tan;
+		}
+		
+		/*类型选择器  .+类型名*/
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: teal;
+		}
+		/*派生选择器*/
+		li strong{
+			font-style: italic;
+		}
+	</style>
+</html>

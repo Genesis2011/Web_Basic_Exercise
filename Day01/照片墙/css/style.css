@@ -1,0 +1,23 @@
+.content{
+	width: 1000px;
+	height: 500px;
+	background-color: tan;
+	/*外边距  标签的边框相对于周围标签的距离*/
+	/*auto 自适应*/
+	margin: 50px auto;
+}
+.pic{
+	width: 180px;
+	height: 270px;
+	background-color: white;
+	/*内边距  自身包裹的内容相对于自身边框的距离  向设置了内边距的方向撑大标签*/
+	padding: 5px;
+	/*保持标签原有大小不变*/
+	box-sizing: border-box;
+	/*边框  2px边框宽度  solid实线  yellow边框颜色*/
+	border: 2px solid yellow;
+}
+.pic1{
+	/*2d 3d效果属性  rotate旋转*/
+	transform: rotate(10deg);
+}
