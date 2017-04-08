@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="sun-line">
+			<div class="sun"></div>
+			<div class="earth-line">
+				<div class="earth"></div>
+				<div class="moon"></div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		div{
+			border-radius: 100%;
+		}
+		.sun-line{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			top: 200px;
+			left: 200px;
+			border: 2px solid black;
+			animation: rotate1 3s infinite linear;
+		}
+		@keyframes rotate1{
+			from{}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+		.sun{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 150px;
+			left: 150px;
+			background-color: red;
+		}
+		.earth-line{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			border: 2px solid black;
+			top: 100px;
+			left: -100px;
+			animation: rotate2 1s infinite linear;
+		}
+		@keyframes rotate2{
+			from{}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+		.earth{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			background-color: blue;
+			top: 75px;
+			left: 75px;
+		}
+		.moon{
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			background-color: black;
+			top: 95px;
+			left: -5px;
+		}
+	</style>
+</html>

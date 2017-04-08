@@ -23,3 +23,91 @@
 .album-img-1:hover img:nth-child(7){
 	transform: scale(0.95);
 }
+
+/**.album-img-2**/
+.album-img-2:hover img:nth-child(1){
+	transform: translateX(-25%) rotate(10deg);
+}
+.album-img-2:hover img:nth-child(2){
+	transform: translateX(-15%) rotate(20deg);
+}
+.album-img-2:hover img:nth-child(3){
+	transform: translateX(-5%) rotate(30deg);
+}
+.album-img-2:hover img:nth-child(4){
+	transform: translateX(5%) rotate(40deg);
+}
+.album-img-2:hover img:nth-child(5){
+	transform: translateX(15%) rotate(50deg);
+}
+
+/**.album-img-7**/
+.album-img-7:hover img:nth-child(1){
+	transform: translateY(-40%) scale(0.5);
+}
+.album-img-7:hover img:nth-child(2){
+	transform: translateY(-20%) scale(0.7);
+}
+.album-img-7:hover img:nth-child(3){
+	transform: translateY(0) scale(0.9);
+}
+.album-img-7:hover img:nth-child(4){
+	transform: translateY(20%) scale(1.1);
+}
+
+/**.album-img-8**/
+.album-img-8:hover img:nth-child(1){
+	transform: translate(-30%,-30%) rotate(30deg) scale(0.7);
+}
+.album-img-8:hover img:nth-child(2){
+	transform: translate(-40%,-20%) rotate(20deg) scale(0.7);
+}
+.album-img-8:hover img:nth-child(3){
+	transform: translate(-50%,-10%) rotate(10deg) scale(0.7);
+}
+.album-img-8:hover img:nth-child(4){
+	transform: translate(30%,-30%) rotate(-30deg) scale(0.7);
+}
+.album-img-8:hover img:nth-child(5){
+	transform: translate(40%,-20%) rotate(-20deg) scale(0.7);
+}
+.album-img-8:hover img:nth-child(6){
+	transform: translate(50%,-10%) rotate(-10deg) scale(0.7);
+}
+.album-img-8:hover img:nth-child(7){
+	transform: translateY(30%);
+}
+
+/**.album-img-9**/
+.album-img-9{
+	/*视距*/
+	perspective: 500px;
+}
+.album-img-9:hover img:nth-child(1){
+	/*translate偏移*/
+	transform: translate(-100%,0) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(2){
+	transform: translate(-100%,-100%) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(3){
+	transform: translate(0,-100%) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(4){
+	transform: translate(100%,-100%) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(5){
+	transform: translate(100%,0) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(6){
+	transform: translate(100%,100%) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(7){
+	transform: translate(0,100%) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(8){
+	transform: translate(-100%,100%) scale(0.9) rotateX(20deg);
+}
+.album-img-9:hover img:nth-child(9){
+	transform: scale(0.9) rotateX(20deg);
+}

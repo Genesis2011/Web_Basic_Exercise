@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="down"></div>
+		<div class="center"></div>
+		<div class="up"></div>
+	</body>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		.box{
+			width: 50px;
+			height: 50px;
+			background-color: green;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			animation: rectangle_move 2s infinite;
+		}
+		@keyframes rectangle_move{
+			0%{
+				top: 0px;
+				left: 0px;
+				background-color: green;
+			}
+			25%{
+				top: 0px;
+				left: 200px;
+				background-color: crimson;
+				transform: rotate(90deg);
+			}
+			50%{
+				top: 200px;
+				left: 200px;
+				background-color: darkviolet;
+				transform: rotate(180deg);
+			}
+			75%{
+				top: 200px;
+				left: 0px;
+				background-color: red;
+				transform: rotate(270deg);
+			}
+			100%{
+				top: 0px;
+				left: 0px;
+				background-color: green;
+				transform: rotate(360deg);
+			}
+		}
+		.down,.center,.up{
+			width: 100px;
+			height: 100px;
+			/*background-color: white;*/
+			/*rgb三原色 red green blue*/
+			/*十六进制 #000000~#FFFFFF*/
+			background-color: rgb(255,255,255);
+			position: absolute;
+			top: 300px;
+			left: 300px;
+			/*圆角*/
+			border-radius: 100%;
+		}
+		.down{
+			/*a代表透明度，0~1*/
+			background-color: rgba(55,255,255,1);
+			animation: downScale 1s infinite;
+		}
+		@keyframes downScale{
+			from{}
+			to{
+				transform: scale(3);
+				background-color: rgba(55,255,255,0);
+			}
+		}
+		.center{
+			background-color: rgba(55,255,255,1);
+			animation: centerScale 1s infinite;
+		}
+		@keyframes centerScale{
+			from{}
+			to{
+				/*transform: scale(2);
+				background-color: rgba(55,255,255,0);*/
+				width: 200px;
+				height: 200px;
+				background-color: rgba(255,255,255,0);
+				top: 250px;
+				left: 250px;
+			}
+		}
+	</style>
+</html>

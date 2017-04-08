@@ -27,5 +27,52 @@
 		/*屏幕可视区的宽度与高度*/
 		var screenwidth=document.documentElement.clientWidth || document.body.clientWidth;
 		var screenheight=document.documentElement.clientHeight || document.body.clientHeight;
+		var movex=true;
+		var movey=true;
+		var posx=200;
+		var posy=200;
+		var mytime=null;
+		
+		function pos_ini(){
+			ball.style.left=posx+"px";
+			ball.style.top=posy+"px";
+		}
+		/*初始化小球ball的位置*/
+		pos_ini();
+		
+		function move(){
+			if(movex){
+				posx--;
+				if(posx<=0){
+					movex=false;
+				}
+				ball.style.left=posx+"px";
+			}
+			else{
+				posx++;
+				if(posx > screenwidth-ballwidth){
+					movex=true;
+				}
+				ball.style.left=posx+"px";
+			}
+			
+			if(movey){
+				posy--;
+				if(posy<=0){
+					movey=false;
+				}
+				ball.style.top=posy+"px";
+			}
+			else{
+				posy++;
+				if(posy > screenheight-ballheight){
+					movey=true;
+				}
+				ball.style.top=posy+"px";
+			}
+			
+		}
+		/*执行*/
+		mytime=setInterval(move,1);
 	</script>
 </html>
