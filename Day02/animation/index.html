@@ -36,7 +36,9 @@
 			width: 100px;
 			height: 100px;
 			position: absolute;
+			/*(.sun-line)height/2 - (.sun)height*/
 			top: 150px;
+			/*(.sun-line)width/2 - (.sun)width/2*/
 			left: 150px;
 			background-color: red;
 		}
@@ -45,7 +47,9 @@
 			height: 200px;
 			position: absolute;
 			border: 2px solid black;
+			/*( (.sun-line)height - (.earth-line)height ) / 2*/
 			top: 100px;
+			/*-(.earth-line)width/2*/
 			left: -100px;
 			animation: rotate2 1s infinite linear;
 		}
@@ -60,7 +64,9 @@
 			height: 50px;
 			position: absolute;
 			background-color: blue;
+			/*(.earth-line)height/2 - (.earth)height/2*/
 			top: 75px;
+			/*(.earth-line)width/2 - (.earth)width/2*/
 			left: 75px;
 		}
 		.moon{
@@ -68,7 +74,9 @@
 			height: 10px;
 			position: absolute;
 			background-color: black;
+			/*(.earth-line)height/2 - (.moon)height/2*/
 			top: 95px;
+			/*-(.moon)width/2*/
 			left: -5px;
 		}
 	</style>
