@@ -1,0 +1,30 @@
+.page2{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.page2 img{
+	/*显示  none隐藏  block块状显示*/
+	display: none;
+}
+.page2-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.page2-pass1{
+	width: 70%;
+	position: absolute;
+	top: 20%;
+	right: 0px;
+}
+.page2-pass2{
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+}

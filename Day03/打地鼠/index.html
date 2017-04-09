@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="gameDiv">
+			<!--onclick添加点击事件-->
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+			<img src="img/5.jpg" onclick="beat(this)"/>
+		</div>
+		<p id="scoreLabel">得分：0</p>
+		<p id="limit"></p>
+	</body>
+	<style type="text/css">
+		#gameDiv{
+			width: 330px;
+			height: 330px;
+			margin: 30px auto;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+		}
+		#scoreLabel{
+			height: 50px;
+			text-align: center;
+			font-size: 50px;
+		}
+		#limit{
+			height: 50px;
+			text-align: center;
+			font-size: 50px;
+		}
+	</style>
+	<script type="text/javascript">
+		//可变的  所有变量的定义都用var
+		//变量的类型由等号后面的值决定
+		//var score =0;
+		//document
+		//getElementByID通过id获取标签
+		var gameDiv = document.getElementById("gameDiv");
+		//定时器
+		var timer;
+		var time_limit = Math.random()*60;
+		time_limit = Math.round(time_limit);
+		//1000  单位ms  function系统默认方法名
+		timer = setInterval(function(){
+			
+			for(var i=0;i<9;i++){
+				var img1 = gameDiv.children[i];
+				img1.src = "img/5.jpg";
+			}
+			
+			//Math.random()随机数  值为0~1之间的小数
+			//*8代表0~8之间的小数
+			var x = Math.random()*8;
+			//Math.round()四舍五入
+			//Math.floor()向下取整
+			x = Math.round(x);
+			
+			var img1 = gameDiv.children[x]; 
+			img1.src = "img/2.gif";
+//			console.log(x);
+
+			time_limit -= 1;
+			document.getElementById("limit").innerHTML = "时间："+time_limit+"s";
+			if (time_limit == 0) {
+				clearInterval(timer);
+				alert("Game Over");
+				window.location.reload();
+			}
+		},1000);
+		
+		var score = 0;
+		
+		//function定义方法
+		//若有返回值，直接return
+		function beat(obj){
+			var str = obj.src;
+			if (str.charAt(str.length-5) == "2") {
+//				alert("点击")
+				obj.src = "img/5.jpg";
+				score += 1;
+				document.getElementById("scoreLabel").innerHTML = "得分："+score;
+				if (score==20) {
+					//停止定时器
+					clearInterval(timer);
+					alert("You Win!");
+					//重新加载页面
+					window.location.reload();
+				}
+			}
+		}
+	</script>
+</html>
