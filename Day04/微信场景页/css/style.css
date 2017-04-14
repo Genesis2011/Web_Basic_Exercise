@@ -1,0 +1,158 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.content{
+	position: absolute;
+}
+.page1{
+	background: deepskyblue;
+	position: relative;
+}
+.page2{
+	background: green;
+	position: relative;
+}
+.page3{
+	background: deeppink;
+	position: relative;
+}
+.page4{
+	background: peachpuff;
+	position: relative;
+}
+.up{
+	position: absolute;
+	width: 20%;
+	left: 40%;
+	bottom: 3%;
+	animation: updown 2s infinite;
+}
+@keyframes updown{
+	50%{bottom: 5%;}
+	100%{bottom: 3%;}
+}
+
+body{
+	background: red;
+}
+
+/*第一页*/
+.page1-title{
+	position: absolute;
+	width: 60%;
+	left: 20%;
+	top: 10%;
+}
+.page1-flower01,.page1-flower02{
+	position: absolute;
+	height: 15%;
+	animation: huang 3s infinite;
+}
+@keyframes huang{
+	25%{transform: rotate(30deg);}
+	50%{transform: rotate(0deg);}
+	75%{transform: rotate(-30deg);}
+	100%{transform: rotate(0deg);}
+}
+.page1-flower01{
+	left: 10%;
+	top: 10%;
+}
+.page1-flower02{
+	right: 10%;
+	top: 15%;
+}
+.page1-cloudy{
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	animation: bigsmall 2s infinite;
+}
+.page1-element{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	animation: bigsmall 2s infinite;
+}
+@keyframes bigsmall{
+	50%{transform: scale(0.9);}
+	100%{transform: scale(1);}
+}
+.page1-building{
+	position: absolute;
+	height: 30%;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+.page1-person{
+	position: absolute;
+	width: 0;
+	left: 15%;
+	bottom: 30%;
+	animation: person 4s infinite;
+}
+@keyframes person{
+	/*易企秀*/
+	50%{transform: scale(1.2);}
+	100%{
+		transform: scale(1);
+	}
+}
+
+/*第三页*/
+.page3-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.page3-station{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+.page3-bus{
+	position: absolute;
+	width: 65%;
+	bottom: 10%;
+	left: 0;
+}
+.page3-me{
+	position: absolute;
+	height: 15%;
+	bottom: 13%;
+	right: 0px;
+}
+.page3-wall{
+	position: absolute;
+	width: 30%;
+	height: 70%;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+.page3-cry{
+	position: absolute;
+	width: 20%;
+	right: 15%;
+	bottom: 65%;
+	display: none;
+}
+.page3-space{
+	position: absolute;
+	width: 0;
+	left: 5%;
+	top: 20%;
+}
+.page3-where{
+	position: absolute;
+	width: 0;
+	left: 10%;
+	bottom: 10%;
+}
