@@ -74,5 +74,15 @@
 		}
 		/*执行*/
 		mytime=setInterval(move,1);
+		//添加鼠标事件
+		ball.onmouseover=function(){
+			//清除计时器
+			clearInterval(mytime);
+		}
+		//添加鼠标事件离开时的事件
+		ball.onmouseout=function(){
+			//
+			mytime=setInterval(move,1);
+		}
 	</script>
 </html>
