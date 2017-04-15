@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classify.css"/>
+		<link rel="stylesheet" type="text/css" href="css/banner.css"/>
+		<link rel="stylesheet" type="text/css" href="css/content.css"/>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="navBox">
+			<div class="nav">
+				<!--无序列表ul  有序列表ol-->
+				<ul>
+					<li class="diqu"><a>地区</a></li>
+					<li><a>更多</a></li>
+					<li><a>手机版</a></li>
+					<li><a>会员服务</a></li>
+					<li><a>手机俱乐部</a></li>
+					<li><a>我的收藏</a></li>
+					<li><a>我的订单</a></li>
+					<li><a>注册</a></li>
+					<li><a>请登陆</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="header">
+			<img src="img/wph.png" class="logo"/>
+			<img src="img/package.png"/>
+			<img src="img/sendBack.jpg"/>
+			<img src="img/7day.jpg"/>
+			<img src="img/100good.jpg"/>
+		</div>
+		
+		<div class="classify">
+			<ul>
+				<li class="currentPage">首页</li>
+				<li>母婴</li>
+				<li>美妆</li>
+				<li>居家</li>
+				<li>男士</li>
+				<li>国际</li>
+				<li>金融</li>
+				<li>旅行</li>
+				<li>明天上线</li>
+				<li>预告</li>
+				<li class="out">分类</li>
+			</ul>
+		</div>
+		
+		<!--广告栏-->
+		<div class="banner">
+			<div class="imageBox">
+				<ul class="imageList">
+					<li>
+						<p class="title">便宜便宜啦</p>
+						<img src="img/1.jpg"/>
+					</li>
+					<li>
+						<p class="title">两块两块啦</p>
+						<img src="img/2.jpg"/>
+					</li>
+					<li>
+						<p class="title">全场两块啦</p>
+						<img src="img/3.jpg"/>
+					</li>
+					<li>
+						<p class="title">清仓狂甩啦</p>
+						<img src="img/4.jpg"/>
+					</li>
+					<li>
+						<p class="title">不要错过啦</p>
+						<img src="img/5.jpg"/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--内容-->
+		<div class="content">
+			<p class="title">新特卖每日早10晚8上新</p>
+			
+			<ul class="clothes">
+				<li class="item">
+					<img src="img/good1.png" class="image1"/>
+					<img src="img/good2.png" class="image2"/>
+				</li>
+				<li class="item">
+					<img src="img/good1.png" class="image1"/>
+					<img src="img/good2.png" class="image2"/>
+				</li>
+				<li class="item">
+					<img src="img/good1.png" class="image1"/>
+					<img src="img/good2.png" class="image2"/>
+				</li>
+				<li class="item">
+					<img src="img/good1.png" class="image1"/>
+					<img src="img/good2.png" class="image2"/>
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+	
+	<script type="text/javascript">
+		$(".classify ul li").click(function(){
+			//当前li改变颜色   去掉其他li的颜色
+			//li添加class为currentPage  其他去掉class
+			$(this).addClass("currentPage").siblings().removeClass("currentPage");
+		});
+		
+		//监听页面滚动
+		$(window).on("scroll",function(){
+			//看不到导航
+			if($(this).scrollTop()>150){
+				$(".classify").addClass("fixed");
+				$(".classify").css({"top":"0px"});
+			}
+			else{
+				$(".classify").removeClass("fixed");
+			}
+		});
+	</script>
+</html>

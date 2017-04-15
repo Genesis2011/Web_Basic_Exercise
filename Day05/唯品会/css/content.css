@@ -1,0 +1,58 @@
+/*内容*/
+.content{
+	width: 960px;
+	/*上  左右  下*/
+	margin: 100px auto 0px;
+	border-top: 1px solid lightgray;
+	position: relative;
+}
+.content .title{
+	width: 320px;
+	height: 50pz;
+	background: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+	color: #666;
+	font-weight: 500;
+	position: absolute;
+	top: -25px;
+	/*960-320*/
+	left: 320px;
+}
+.content .clothes{
+	list-style: none;
+	margin-top: 50px;
+}
+.clothes .item{
+	width: 50%;
+	height: 300px;
+	float: left;
+	position: relative;
+}
+.clothes .item img{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.clothes .item .image1{
+	width: 95%;
+	height: 95%;
+}
+.clothes .item:hover .image1{
+	/*滤镜效果*/
+	filter: blur(2px);
+}
+.clothes .item .image2{
+	width: 80%;
+	height: 80%;
+	/*圆角*/
+	border-radius: 5px;
+	display: none;
+}
+.clothes .item:hover .image2{
+	display: block;
+}

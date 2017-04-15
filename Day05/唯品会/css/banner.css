@@ -1,0 +1,51 @@
+.banner{
+	height: 360px;
+	/*背景图*/
+	background-image: url(../img/background.jpg);
+	/*不平铺*/
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.banner .imageBox{
+	width: 660px;
+	height: 310px;
+	background: rgba(255,255,255,0.8);
+	margin: 0 auto;
+	position: relative;
+	top: 50px;
+}
+.imageList{
+	width: 100%;
+	height: 40px;
+	background: white;
+	position: absolute;
+	bottom: 0;
+	list-style: none;
+}
+.imageList li{
+	float: left;
+	width: 20%;
+	color: #666;
+	line-height: 40px;
+	text-align: center;
+	font-size: 12px;
+}
+.imageList img{
+	width: 640px;
+	/*310-40-10*/
+	height: 260px;
+	position: absolute;
+	left: 10px;
+	bottom: 40px;
+	/*透明度*/
+	opacity: 0;
+	z-index: 5;
+}
+/*默认显示第一张*/
+.imageList li:nth-child(1) img{
+	opacity: 1;
+}
+.imageList li:hover img{
+	opacity: 1;
+	z-index: 6;
+}

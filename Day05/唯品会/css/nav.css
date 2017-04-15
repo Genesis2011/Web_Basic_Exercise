@@ -1,0 +1,49 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.navBox{
+	height: 30px;
+	background: linear-gradient(greenyellow,yellow);
+}
+.navBox .nav{
+	width: 960px;
+	height: 100%;
+	/*background: red;*/
+	/*外边距  上下为0  左右自适应*/
+	margin: 0 auto;
+}
+.navBox .nav ul{
+	/*样式   去掉点*/
+	list-style: none;
+	color: gray;
+	font-size: 14px;
+}
+.navBox .nav ul li{
+	float: right;
+	/*行高*/
+	line-height: 30px;
+	/*改变光标样式*/
+	cursor: pointer;
+}
+.navBox .nav li a{
+	margin: 0 15px;
+}
+.navBox .nav ul .diqu{
+	float: left;
+}
+.nav ul li:hover{
+	color: deeppink;
+}
+.header{
+	width: 960px;
+	height: 90px;
+	margin: 0 auto;
+}
+.header img{
+	height: 100%;
+	float: right;
+}
+.header .logo{
+	float: left;
+}
