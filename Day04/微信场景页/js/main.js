@@ -56,7 +56,13 @@ $(document).ready(function(){
 
 function otherAnimate(){
 	if (nowpage==1) {
-		
+		//淡入动画  fadeIn淡入   function淡入结束之后执行
+		$(".page2-bg").fadeIn(2000, function() {
+			$(".page2-pass1").fadeIn(2000,function(){
+				$(".page2-pass2").fadeIn(2000);
+			});
+			
+		});
 	}
 	if (nowpage==2) {
 		$(".page3-bus").animate({left:'-100%'},{duration:2000});
@@ -74,5 +80,34 @@ function otherAnimate(){
 			});
 						
 		}});
+	}
+}
+
+//灯一被点击就会调用这个方法
+function liang(image){
+	image.src = "img/lightOn.png";
+	
+	$(".page4-bg").fadeOut("slow");
+	$(".page4-title").fadeOut("slow");
+	$(".page4-click").fadeOut("slow",function(){
+		
+		//场景二开始淡入
+		$(".page4-onbg").fadeIn("slow");
+		$(".page4-wky").fadeIn("slow");
+		
+	});
+}
+
+function PlayPause (musicbtn) {
+	var player = document.getElementById("musicPlayer");
+	//如果暂停中
+	if (player.paused) {
+		//调用play方法
+		player.play()
+		musicbtn.src = "img/musicBtn.png";
+	} else{
+		//暂停
+		player.pause();
+		musicbtn.src = "img/musicBtnOff.png";
 	}
 }
